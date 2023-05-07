@@ -1,0 +1,46 @@
+﻿@model SearchViewModel
+
+@{
+    ViewData["Title"] = " | Search Results";
+}
+
+<div class="row">
+    <div class="col">
+        <h1 class="mb-2">@Model.Header</h1>
+    </div>
+    <div class="col">
+        <div class="float-right pr-2">
+            <a asp-action="Index">New Search</a>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>
+                    <a asp-action="Details" asp-controller="Product"
+                   asp-area="" asp-route-id="@product.ProductId"
+                   asp-route-slug="@product.Name.Slug()">@product.Name</a>
+                </td>
+                <td>@product.Category.Name</td>
+                <td>
+                    @foreach (ProductBrand ba in product.ProductBrands)
+                    {
+                        <div>@ba.Brand.FullName</div>
+                    }
+                </td>
+                <td>
+                    <div class="float-right">
+                        <a asp-action="Edit" asp-route-id="@product.ProductId"
+                       class="btn btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@product.ProductId"
+                       class="btn btn-primary">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

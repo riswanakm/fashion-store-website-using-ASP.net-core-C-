@@ -1,0 +1,95 @@
+﻿@model ProductViewModel
+
+@{
+    // this view is used for add, edit, and delete.
+    // Which one is determined by the action method name.
+    var action = ViewContext.RouteData.Values["action"].ToString().Capitalize();
+
+    ViewData["Title"] = $" | {action} Product";
+}
+
+<h1>@action Product</h1>
+
+<form asp-action="@action" asp-area="Admin" method="post">
+
+    <input type="hidden" asp-for="Product.ProductId" />
+
+    <div class="form-group row">
+        <div class="col-sm-2"><label>Title:</label></div>
+
+        @* if deleting, display title in a label and put value in hidden field
+        for delete message. Otherwise, provide a text box*@
+        @if (Operation.IsDelete(action))
+        {
+            <div class="col-sm-4"><label>@Model.Product.Name</label></div>
+            <input type="hidden" asp-for="Product.Name" />
+        }
+        else
+        {
+            <div class="col-sm-4">
+                <input type="text" asp-for="Product.Name" class="form-control" />
+            </div>
+            <div class="col-sm-6">
+                <span asp-validation-for="Product.Name" class="text-danger"></span>
+            </div>
+        }
+    </div>
+
+    @* if not deleting, display text boxes and drop-downs for rest of fields*@
+    @if (!Operation.IsDelete(action))
+    {
+        <div class="form-group row">
+            <div class="col-sm-2"><label>Price:</label></div>
+            <div class="col-sm-4">
+                <input type="text" asp-for="Product.Price" class="form-control" />
+            </div>
+            <div class="col-sm-6">
+                <span asp-validation-for="Product.Price" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2"><label>Category:</label></div>
+            <div class="col-sm-4">
+                <select asp-for="Product.CategoryId" class="form-control"
+                    asp-items='@new SelectList(Model.Categories, "CategoryId", "Name", Model.Product.CategoryId)'>
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">
+                <label>Brand(s):</label><br />
+            </div>
+            <div class="col-sm-4">
+                <select asp-for="SelectedBrands" class="form-control"
+                    asp-items='@new MultiSelectList(Model.Brands, "BrandId", "FullName", Model.SelectedBrands)'>
+                </select>
+                (Hold down CTRL or CMD key to select multiple)
+            </div>
+            <div class="col-sm-6">
+                <span asp-validation-for="SelectedBrands" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row mb-3">
+            <div class="col-sm-2"><label>Image:</label></div>
+            <input type="hidden" asp-for="Product.ImageName" />
+            <div class="col-sm-4">
+                <input accept="image/*" asp-for="Product.ImageFile" class="form-control" />
+            </div>
+            <div class="col-sm-6">
+                <span asp-validation-for="Product.ImageFile" class="text-danger"></span>
+            </div>
+        </div>
+    }
+    <div class="row">
+        <div class="col-sm-4 offset-sm-2">
+            <button type="submit" class="btn btn-primary">@action</button>
+
+            @* return user to main admin page after add, or to search page otherwise *@
+            <a asp-action="@(Operation.IsAdd(action) ? "Index" : "Search")"
+               class="btn btn-primary">Cancel</a>
+        </div>
+    </div>
+</form>

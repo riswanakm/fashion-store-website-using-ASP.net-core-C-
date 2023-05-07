@@ -1,0 +1,45 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = " | Product Details";
+}
+
+<h1>Product Details</h1>
+
+<table class="table table-bordered table-sm">
+    <thead>
+        <tr class="thead-dark">
+            <th>Title:</th>
+            <th>@Model.Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@(Model.ProductBrands.Count > 1 ? "Brands" : "Brand")</td>
+            <td>
+                @foreach (ProductBrand ba in Model.ProductBrands)
+                {
+                    <p>
+                        <a asp-action="Details" asp-controller="Brand"
+                       asp-route-id="@ba.BrandId"
+                       asp-route-slug="@ba.Brand.FullName.Slug()">
+                            @ba.Brand.FullName
+                        </a>
+                    </p>
+                }
+            </td>
+  @*          <td>
+                <img src="~/images/products/@Model.ImageName" alt="" />
+            </td>*@
+        </tr>
+        <tr><td>Price:</td><td>@Model.Price.ToString("c")</td></tr>
+        <tr><td>Category:</td><td>@Model.Category.Name</td></tr>
+    </tbody>
+</table>
+
+<form asp-action="Add" asp-controller="Cart" method="post">
+    <button type="submit" name="id" value="@Model.ProductId"
+            class="btn btn-primary">
+        Add To Cart
+    </button>
+</form>

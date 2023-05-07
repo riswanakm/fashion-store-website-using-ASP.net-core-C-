@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "_Layout";
+
+    var current = ViewContext.RouteData.Values["controller"]?.ToString();
+}
+
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+    <ul class="nav nav-tabs mt-2 mb-3">
+        <li class="nav-item">
+            <a asp-action="Index" asp-controller="Product"
+           class="nav-link @Nav.Active("Product", current)">
+                Manage Products
+            </a>
+        </li>
+        <li class="nav-item">
+            <a asp-action="Index" asp-controller="Brand"
+           class="nav-link @Nav.Active("Brand", current)">
+                Manage Brands
+            </a>
+        </li>
+        <li class="nav-item">
+            <a asp-action="Index" asp-controller="Category"
+           class="nav-link @Nav.Active("Category", current)">
+                Manage Categories
+            </a>
+        </li>
+        <li class="nav-item">
+            <a asp-action="Index" asp-controller="User"
+           class="nav-link @Nav.Active("User", current)">
+                Manage Users
+            </a>
+        </li>
+    </ul>
+
+    @RenderBody()

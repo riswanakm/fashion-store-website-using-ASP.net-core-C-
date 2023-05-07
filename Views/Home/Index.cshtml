@@ -1,0 +1,600 @@
+﻿@*@model Product*@
+
+@*<div class="text-center">
+    <h1>Our Staff Pick!</h1>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-heading list-group-item-success">
+            <h5>
+                <a asp-controller="Product"
+                   asp-action="Details"
+                   asp-route-id="@Model.ProductId"
+                   asp-route-slug="@Model.Name.Slug()">
+                    @Model.Name
+                </a>
+            </h5>
+        </li>
+    </ul>
+</div>*@
+<!-- Main Slider Start -->
+<div class="ec-main-slider section ">
+    <div class="ec-slider swiper-container main-slider-nav main-slider-dot">
+        <!-- Main slider -->
+        <div class="swiper-wrapper">
+            <div class="ec-slide-item swiper-slide d-flex slide-1">
+                <div class="container align-self-center">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 align-self-center">
+                            <div class="ec-slide-content slider-animation">
+                                <h2 class="ec-slide-stitle">Women Fashion</h2>
+                                <h1 class="ec-slide-title">Top New Winter <br>Collection</h1>
+                                <p>Get it form 50% off</p>
+                                <a href="#" class="btn btn-lg btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ec-slide-item swiper-slide d-flex slide-2">
+                <div class="container align-self-center">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 align-self-center">
+                            <div class="ec-slide-content slider-animation">
+                                <h2 class="ec-slide-stitle">Men's Fashion</h2>
+                                <h1 class="ec-slide-title">Top New summer <br>Collection</h1>
+                                <p>Get it form 50% off</p>
+                                <a href="#" class="btn btn-lg btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <div class="swiper-buttons">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</div>
+<!-- Main Slider End -->
+<!-- ec Banner Section Start -->
+<section class="ec-banner section section-space-p">
+    <h2 class="d-none">Banner</h2>
+    <div class="container">
+        <div class="row">
+            <div class="ec-banner-bottom">
+                <div class="ec-banner-inner">
+                    <div class="ec-banner-block ec-banner-block-4 mar-b-30">
+                        <div class="banner-block">
+                            <img src="~/images/products/hhfinal.jpg" alt="" />
+                         @*   <div class="banner-content">
+                                <div class="banner-text">
+                                    <span class="ec-banner-discount">Big Discount</span>
+                                    <span class="ec-banner-title">20% Off</span>
+                                    <span class="ec-banner-stitle">Men shoes collection</span>
+                                </div>
+                                <span class="ec-banner-btn"><a href="shop-left-sidebar-col-3.html">Shop Now</a></span>
+                            </div>*@
+                        </div>
+                    </div>
+                    <div class="ec-banner-block ec-banner-block-5">
+                        <div class="banner-block">
+                            <img src="~/images/products/hhfinal2.jpg" alt="" />
+                       @*     <div class="banner-content">
+                                <div class="banner-text">
+                                    <span class="ec-banner-discount">Big Discount</span>
+                                    <span class="ec-banner-title">40% Off</span>
+                                    <span class="ec-banner-stitle">Women jacket collection</span>
+                                </div>
+                                <span class="ec-banner-btn"><a href="shop-left-sidebar-col-3.html">Shop Now</a></span>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ec Banner Section End -->
+<!-- Trending Item Start -->
+<section class="section ec-trend-product section-space-p">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title">
+                    <h2 class="ec-title">Trending Item</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ec-trend-slider">
+                <div class="ec-product-content">
+                    <div class="ec-product-inner">
+                        <div class="ec-pro-image-outer">
+                            <div class="ec-pro-image">
+                                <a href="product-left-sidebar.html" class="image">
+                                    <img class="main-image" src="~/images/products/Cut-out Dress.jpeg"
+                                         alt="Product" />
+                                    <img class="hover-image" src="~/images/products/Cut-out Dress.jpeg"
+                                         alt="Product" />
+                                </a>
+                                <span class="percentage">-30%</span>
+                                <span class="flags">
+                                    <span class="sale">On Sale</span>
+                                </span>
+                                <button title="Add To Cart" class=" add-to-cart">
+                                    <img src="~/images/icons/pro_cart.svg" class="svg_img pro_svg"
+                                         alt="" /> Add
+                                    To Cart
+                                </button>
+
+                                <div class="ec-pro-actions">
+                                    <a class="ec-btn-group wishlist" title="Wishlist">
+                                        <img src="~/images/icons/pro_wishlist.svg"
+                                             class="svg_img pro_svg" alt="" />
+                                    </a>
+                                    <a href="compare.html" class="ec-btn-group compare" title="Compare">
+                                        <img src="~/images/icons/compare.svg" class="svg_img pro_svg"
+                                             alt="" />
+                                    </a>
+                                    <a href="#" class="ec-btn-group quickview" data-link-action="quickview"
+                                       title="Quick view" data-bs-toggle="modal"
+                                       data-bs-target="#ec_quickview_modal">
+                                        <img src="~/images/icons/quickview.svg" class="svg_img pro_svg"
+                                             alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ec-pro-content">
+                            <div class="ec-pro-rating">
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star"></i>
+                            </div>
+                            <h5 class="ec-pro-title"><a href="product-left-sidebar.html">Cut Out Dress</a></h5>
+                            <span class="ec-price">
+                                <span class="new-price">$399.00</span>
+                                <span class="old-price">$450.00</span>
+                            </span>
+                            <div class="ec-pro-option">
+                                <div class="ec-pro-color">
+                                    <ul class="ec-opt-swatch ec-change-img">
+                                        <li class="active">
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/products/bikerjacket.jpg"
+                                               data-src-hover="~/images/products/bikerjacket.jpg"
+                                               data-tooltip="Gray">
+                                                <span style="background-color:#be7a50;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/products/1_2.jpg"
+                                               data-src-hover="~/images/products/1_2.jpg"
+                                               data-tooltip="Orange">
+                                                <span style="background-color:#bd4e6f;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/products/1_3.jpg"
+                                               data-src-hover="~/images/products/1_3.jpg"
+                                               data-tooltip="Green">
+                                                <span style="background-color:#528fb7;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/products/1_4.jpg"
+                                               data-src-hover="~/images/products/1_4.jpg"
+                                               data-tooltip="Sky Blue">
+                                                <span style="background-color:#56a58e;"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ec-pro-size">
+                                    <ul class="ec-opt-size">
+                                        <li>
+                                            <a href="#" class="ec-opt-sz" data-old="$470.00" data-new="$419.00"
+                                               data-tooltip="Large">L</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ec-product-content">
+                    <div class="ec-product-inner">
+                        <div class="ec-pro-image-outer">
+                            <div class="ec-pro-image">
+                                <a href="product-left-sidebar.html" class="image">
+                                    <img class="main-image" src="~/images/products/bikerjacket.jpeg"
+                                         alt="Product" />
+                                    <img class="hover-image" src="~/images/products/bikerjacket.jpeg"
+                                         alt="Product" />
+                                </a>
+                                <span class="percentage">-30%</span>
+                                <span class="flags">
+                                    <span class="sale">On Sale</span>
+                                </span>
+                                <button title="Add To Cart" class=" add-to-cart">
+                                    <img src="~/images/icons/pro_cart.svg" class="svg_img pro_svg"
+                                         alt="" /> Add
+                                    To Cart
+                                </button>
+
+                                <div class="ec-pro-actions">
+                                    <a class="ec-btn-group wishlist" title="Wishlist">
+                                        <img src="~/images/icons/pro_wishlist.svg"
+                                             class="svg_img pro_svg" alt="" />
+                                    </a>
+                                    <a href="compare.html" class="ec-btn-group compare" title="Compare">
+                                        <img src="~/images/icons/compare.svg" class="svg_img pro_svg"
+                                             alt="" />
+                                    </a>
+                                    <a href="#" class="ec-btn-group quickview" data-link-action="quickview"
+                                       title="Quick view" data-bs-toggle="modal"
+                                       data-bs-target="#ec_quickview_modal">
+                                        <img src="~/images/icons/quickview.svg" class="svg_img pro_svg"
+                                             alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ec-pro-content">
+                            <div class="ec-pro-rating">
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star"></i>
+                            </div>
+                            <h5 class="ec-pro-title"><a href="product-left-sidebar.html">Biker Jacket</a></h5>
+                            <span class="ec-price">
+                                <span class="new-price">$399.00</span>
+                                <span class="old-price">$450.00</span>
+                            </span>
+                            <div class="ec-pro-option">
+                                <div class="ec-pro-color">
+                                    <ul class="ec-opt-swatch ec-change-img">
+                                        <li>
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/product-image/2_2.jpg"
+                                               data-src-hover="~/images/product-image/2_2.jpg"
+                                               data-tooltip="Orange">
+                                                <span style="background-color:#e2a100;"></span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="ec-pro-size">
+                                    <ul class="ec-opt-size">
+                                        <li>
+                                            <a href="#" class="ec-opt-sz" data-old="$460.00" data-new="$409.00"
+                                               data-tooltip="Medium">M</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-sz" data-old="$470.00" data-new="$419.00"
+                                               data-tooltip="Large">L</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ec-product-content">
+                    <div class="ec-product-inner">
+                        <div class="ec-pro-image-outer">
+                            <div class="ec-pro-image">
+                                <a href="product-left-sidebar.html" class="image">
+                                    <img class="main-image" src="~/images/products/Padded Bomber Jacket1.jpg"
+                                         alt="Product" />
+                                    <img class="hover-image" src="~/images/products/Padded Bomber Jacket1.jpg"
+                                         alt="Product" />
+                                </a>
+                                <span class="percentage">-30%</span>
+                                <span class="flags">
+                                    <span class="sale">On Sale</span>
+                                </span>
+                                <button title="Add To Cart" class=" add-to-cart">
+                                    <img src="~/images/icons/pro_cart.svg" class="svg_img pro_svg"
+                                         alt="" /> Add
+                                    To Cart
+                                </button>
+
+                                <div class="ec-pro-actions">
+                                    <a class="ec-btn-group wishlist" title="Wishlist">
+                                        <img src="~/images/icons/pro_wishlist.svg"
+                                             class="svg_img pro_svg" alt="" />
+                                    </a>
+                                    <a href="compare.html" class="ec-btn-group compare" title="Compare">
+                                        <img src="~/images/icons/compare.svg" class="svg_img pro_svg"
+                                             alt="" />
+                                    </a>
+                                    <a href="#" class="ec-btn-group quickview" data-link-action="quickview"
+                                       title="Quick view" data-bs-toggle="modal"
+                                       data-bs-target="#ec_quickview_modal">
+                                        <img src="~/images/icons/quickview.svg" class="svg_img pro_svg"
+                                             alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ec-pro-content">
+                            <div class="ec-pro-rating">
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star"></i>
+                            </div>
+                            <h5 class="ec-pro-title"><a href="product-left-sidebar.html">Padded Bomber Jacket</a></h5>
+                            <span class="ec-price">
+                                <span class="new-price">$399.00</span>
+                                <span class="old-price">$450.00</span>
+                            </span>
+                            <div class="ec-pro-option">
+                                <div class="ec-pro-color">
+                                    <ul class="ec-opt-swatch ec-change-img">
+                                        <li class="active">
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/product-image/3_1.jpg"
+                                               data-src-hover="~/images/product-image/3_1.jpg"
+                                               data-tooltip="Gray">
+                                                <span style="background-color:#86c1f5;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/product-image/3_2.jpg"
+                                               data-src-hover="~/images/product-image/3_2.jpg"
+                                               data-tooltip="Orange">
+                                                <span style="background-color:#71d6c8;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/product-image/3_3.jpg"
+                                               data-src-hover="~/images/product-image/3_3.jpg"
+                                               data-tooltip="Green">
+                                                <span style="background-color:#81d48e;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/product-image/3_4.jpg"
+                                               data-src-hover="~/images/product-image/3_4.jpg"
+                                               data-tooltip="Sky Blue">
+                                                <span style="background-color:#e6b87d;"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ec-pro-size">
+                                    <ul class="ec-opt-size">
+                                        <li class="active">
+                                            <a href="#" class="ec-opt-sz" data-old="$450.00"
+                                               data-new="$399.00" data-tooltip="Small">S</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-sz" data-old="$460.00" data-new="$409.00"
+                                               data-tooltip="Medium">M</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ec-product-content">
+                    <div class="ec-product-inner">
+                        <div class="ec-pro-image-outer">
+                            <div class="ec-pro-image">
+                                <a href="product-left-sidebar.html" class="image">
+                                    <img class="main-image" src="~/images/products/Cotton Twill Utility Jacket.jpeg"
+                                         alt="Product" />
+                                    <img class="hover-image" src="~/images/products/Cotton Twill Utility Jacket.jpeg"
+                                         alt="Product" />
+                                </a>
+                                <span class="percentage">-30%</span>
+                                <span class="flags">
+                                    <span class="sale">On Sale</span>
+                                </span>
+                                <button title="Add To Cart" class=" add-to-cart">
+                                    <img src="~/images/icons/pro_cart.svg" class="svg_img pro_svg"
+                                         alt="" /> Add
+                                    To Cart
+                                </button>
+
+                                <div class="ec-pro-actions">
+                                    <a class="ec-btn-group wishlist" title="Wishlist">
+                                        <img src="~/images/icons/pro_wishlist.svg"
+                                             class="svg_img pro_svg" alt="" />
+                                    </a>
+                                    <a href="compare.html" class="ec-btn-group compare" title="Compare">
+                                        <img src="~/images/icons/compare.svg" class="svg_img pro_svg"
+                                             alt="" />
+                                    </a>
+                                    <a href="#" class="ec-btn-group quickview" data-link-action="quickview"
+                                       title="Quick view" data-bs-toggle="modal"
+                                       data-bs-target="#ec_quickview_modal">
+                                        <img src="~/images/icons/quickview.svg" class="svg_img pro_svg"
+                                             alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ec-pro-content">
+                            <div class="ec-pro-rating">
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star fill"></i>
+                                <i class="ecicon eci-star"></i>
+                            </div>
+                            <h5 class="ec-pro-title"><a href="product-left-sidebar.html">Cotton Twill Utility Jacket</a></h5>
+                            <span class="ec-price">
+                                <span class="new-price">$399.00</span>
+                                <span class="old-price">$450.00</span>
+                            </span>
+                            <div class="ec-pro-option">
+                                <div class="ec-pro-color">
+                                    <ul class="ec-opt-swatch ec-change-img">
+                                        <li class="active">
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/product-image/4_1.jpg"
+                                               data-src-hover="~/images/product-image/4_1.jpg"
+                                               data-tooltip="Gray">
+                                                <span style="background-color:#b48059;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/product-image/4_2.jpg"
+                                               data-src-hover="~/images/product-image/4_2.jpg"
+                                               data-tooltip="Orange">
+                                                <span style="background-color:#71a06b;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/product-image/4_3.jpg"
+                                               data-src-hover="~/images/product-image/4_3.jpg"
+                                               data-tooltip="Green">
+                                                <span style="background-color:#64c2da;"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-clr-img"
+                                               data-src="~/images/product-image/4_4.jpg"
+                                               data-src-hover="~/images/product-image/4_4.jpg"
+                                               data-tooltip="Sky Blue">
+                                                <span style="background-color:#9b6cc2;"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ec-pro-size">
+                                    <ul class="ec-opt-size">
+                                        <li class="active">
+                                            <a href="#" class="ec-opt-sz" data-old="$450.00"
+                                               data-new="$399.00" data-tooltip="Small">S</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="ec-opt-sz" data-old="$460.00" data-new="$409.00"
+                                               data-tooltip="Medium">M</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Trending Item end -->
+<!--  offer Section Start -->
+<section class="section ec-offer-section section-space-mt section-space-mb">
+    <h2 class="d-none">Offer</h2>
+    <img src="~/images/products/largebanner.jpeg" alt="" class="offer_bg" />
+@*    <div class="ec-offer-inner">
+        <div class="row justify-content-end">
+            <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 align-self-center ec-offer-content">
+                <h2 class="ec-offer-stitle">Style Of The Year</h2>
+                <h2 class="ec-offer-title">Trading Offer Sale</h2>
+                <span class="ec-offer-desc">New Product Purchase Up To 50% Off All Now Fast Shopping</span>
+                <span class="ec-offer-btn"><a href="#" class="btn btn-lg btn-primary">Shop Now</a></span>
+            </div>
+        </div>
+    </div>*@
+</section>
+<!-- offer Section End -->
+                <!-- ec testimonial Start -->
+    <section class="section ec-test-section section-space-mt section-space-mb section-space-p"
+        style="background-image: url('assets/images/testimonial/testi_bg.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center ec-test-top">
+                    <div class="ec-test-top-svg">
+                        <h2 class="d-none">Testimonial</h2>
+                        <img src="~/images/testimonial/quotes-2.svg" class="svg_img test_top_svg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ec-test-outer">
+                    <ul id="ec-testimonial-slider">
+                        <li class="ec-test-item">
+                            <div class="ec-test-inner">
+                                <div class="ec-test-img"><img alt="testimonial" title="testimonial"
+                                        src="~/images/testimonial/person1.jpg" /></div>
+                                <div class="ec-test-content">
+                                    <div class="ec-test-desc"><img src="assets/images/testimonial/top-quotes-2.svg"
+                                            class="svg_img test_svg top" alt="" /> Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                        standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                        of type and scrambled it to make a type specimen book. It has survived not only
+                                        five centuries, but also the leap into electronic typesetting, remaining
+                                        essentially unchanged. It was popularised in <img
+                                            src="~/images/testimonial/bottom-quotes.svg"
+                                            class="svg_img test_svg bottom" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ec-test-item">
+                            <div class="ec-test-inner">
+                                <div class="ec-test-img"><img alt="testimonial" title="testimonial"
+                                        src="~/images/testimonial/person2.jpg" /></div>
+                                <div class="ec-test-content">
+                                    <div class="ec-test-desc"><img src="assets/images/testimonial/top-quotes-2.svg"
+                                            class="svg_img test_svg top" alt="" /> Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                        standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                        of type and scrambled it to make a type specimen book. It has survived not only
+                                        five centuries, but also the leap into electronic typesetting, remaining
+                                        essentially unchanged. It was popularised in <img
+                                            src="~/images/testimonial/bottom-quotes-2.svg"
+                                            class="svg_img test_svg bottom" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ec-test-item">
+                            <div class="ec-test-inner">
+                                <div class="ec-test-img"><img alt="testimonial" title="testimonial"
+                                        src="~/images/testimonial/person3.png" /></div>
+                                <div class="ec-test-content">
+                                    <div class="ec-test-desc"><img src="~/images/testimonial/top-quotes-2.svg"
+                                            class="svg_img test_svg top" alt="" /> Lorem Ipsum is simply dummy text of
+                                        the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                        standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                        of type and scrambled it to make a type specimen book. It has survived not only
+                                        five centuries, but also the leap into electronic typesetting, remaining
+                                        essentially unchanged. It was popularised in <img
+                                            src="~/images/testimonial/bottom-quotes-2.svg"
+                                            class="svg_img test_svg bottom" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ec testimonial end -->
+
+
+
+

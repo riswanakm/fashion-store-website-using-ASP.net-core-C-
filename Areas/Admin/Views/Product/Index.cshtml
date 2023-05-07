@@ -1,0 +1,34 @@
+﻿@model SearchViewModel
+
+@{
+    ViewData["Title"] = " | Manage Products";
+}
+
+<h1 class="mb-2">Manage Books</h1>
+<ul class="list-group">
+    <li class="list-group-item">
+        <h5 class="mt-1"><a asp-action="Add">Add a product</a></h5>
+    </li>
+    <li class="list-group-item">
+        <form asp-action="Search" method="post" class="form-inline">
+            <h5 class="mt-1 mr-5">Find a product</h5>
+            <label>Search Term:</label>
+            <input type="text" asp-for="SearchTerm" class="form-control ml-2 mr-2">
+            Search By:
+            <label class="radio-inline">
+                <input type="radio" class="form-control ml-2 mr-2"
+                       asp-for="Type" value="product" checked>Name
+            </label>
+            <label class="radio-inline">
+                <input type="radio" class="form-control ml-2 mr-2"
+                       asp-for="Type" value="brand">Brand
+            </label>
+            <label class="radio-inline">
+                <input type="radio" class="form-control ml-2 mr-2"
+                       asp-for="Type" value="category">Category
+            </label>
+            <button type="submit" class="btn btn-primary ml-2 mr-2">Find</button>
+            <span asp-validation-for="SearchTerm" class="text-danger"></span>
+        </form>
+    </li>
+</ul>
